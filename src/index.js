@@ -1,7 +1,6 @@
 import $ from 'jquery'
-import './styles/index.scss'
-import pkq from './imgs/pkq.jpg'
+import '@/styles/index.scss'
+
 $(function() {
-    console.log('hello wrold!', pkq)
 
 })
