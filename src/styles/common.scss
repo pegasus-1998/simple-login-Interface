@@ -17,3 +17,17 @@ body {
     background-repeat: no-repeat;
     background-image: url('@/imgs/bg.jpg');
 }
+
+a {
+    cursor: pointer;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+input {
+    outline: none;
+}

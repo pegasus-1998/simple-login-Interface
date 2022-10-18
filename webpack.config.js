@@ -12,11 +12,13 @@ module.exports = {
         path: path.join(__dirname, 'dist'),
         filename: 'js/index.js'
     },
+    target: 'web',
     devtool: 'nosources-source-map', // source-map or eval-source-map or nosources-source-map
     plugins: [hwp, new CleanWebpackPlugin()],
     devServer: {
         open: true,
-        port: 80
+        port: 8686,
+        hot: true,
     },
     resolve: {
         alias: {
@@ -25,6 +27,13 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test:  /\.html$/,
+                loader: 'html-loader',
+                options: {
+                    esModule: false
+                }
+            },
             { 
                 test: /\.css|.scss$/, 
                 use: ['style-loader', 'css-loader', 'sass-loader'],

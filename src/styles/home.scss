@@ -1,0 +1,86 @@
+.login-module {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    width: 350px;
+    min-height: 350px;
+    padding: 25px;
+    background: rgba(#fff, .7);
+    .login-mode {
+        display: flex;
+        font-size: 16px;
+        font-weight: 700;
+        color: #3c3c3c;
+        margin-bottom: 15px;
+        a {
+            padding: 5px;
+        }
+        .mode-active {
+            border-bottom: 2px solid #000;
+        }
+    }
+    .login-form {
+        .form-item {
+            display: flex;
+            height: 42px;
+            margin: 25px 0;
+            .left-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 42px;
+                background-color: #ccc;
+                .icon-cen {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+            .pas-phone-input {
+                flex: 1;
+                border: none;
+                text-indent: 1em;
+                font-size: 14px;
+                background: rgba(#fff, 1);
+            }
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            height: 42px;
+            color: #fff;
+            font-size: 16px;
+            letter-spacing: 10px;
+            background: #f40;
+            border-radius: 4px;
+        }
+    }
+    .login-kind {
+        display: flex;
+        align-items: center;
+        color: #666;
+        font-size: 12px;
+        margin: 18px 0;
+        transition: all .3s ease;
+        .kind-imgs {
+            .kind-img {
+                cursor: pointer;
+                width: 23px;
+                margin-right: 5px;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    .other-fun{
+        display: flex;
+        justify-content: flex-end;
+        color: #666;
+        font-size: 12px;
+        .sp {
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    }
+}
