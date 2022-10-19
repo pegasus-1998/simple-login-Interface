@@ -5,25 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>simple-login-interface</title>
+    <link rel=icon href=favicon.ico>
 </head>
 <body>
     <div class="login-module">
+        <img src="./imgs/code-icon.png" class="code-icon"/>
         <div class="login-mode">
-            <a class="password-item mode-active">密码登录</a>
-            <a class="mes-item">短信登录</a>
+            <a class="tab-item mode-active">密码登录</a>
+            <a class="tab-item">短信登录</a>
         </div>
         <form class="login-form">
             <div class="form-item">
                 <div class="left-icon">
                     <img src="./imgs/user-icon.png" class="icon-cen"/>
                 </div>
-                <input type="text" class="pas-phone-input" placeholder="账号名/邮箱/手机号">
+                <input type="text" class="pas-phone-input" data-index='1' placeholder="请输入账号">
+                <span class="ver-text">请输入账号</span>
             </div>
             <div class="form-item">
                 <div class="left-icon">
                     <img src="./imgs/lock-icon.png" class="icon-cen"/>
                 </div>
-                <input type="text" class="pas-phone-input" placeholder="账号名/邮箱/手机号">
+                <input type="text" class="pas-phone-input" data-index='2' placeholder="请输入密码">
+                <span class="ver-text">请输入密码</span>
             </div>
             <button type="submit" class="submit-btn">登录</button>
         </form>

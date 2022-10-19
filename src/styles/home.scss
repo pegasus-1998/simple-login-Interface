@@ -7,12 +7,27 @@
     min-height: 350px;
     padding: 25px;
     background: rgba(#fff, .7);
+    transition-property: 800;
+    .code-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        width: 40px;
+        transition: all 2s ease;
+        transform-style: preserve-3d;
+        &:hover {
+            transform-origin: center;
+            transform: skew(15deg, 10deg) rotate(-45deg) ;
+        }
+    }
     .login-mode {
         display: flex;
         font-size: 16px;
         font-weight: 700;
         color: #3c3c3c;
         margin-bottom: 15px;
+        user-select: none;
         a {
             padding: 5px;
         }
@@ -22,6 +37,7 @@
     }
     .login-form {
         .form-item {
+            position: relative;
             display: flex;
             height: 42px;
             margin: 25px 0;
@@ -43,6 +59,15 @@
                 font-size: 14px;
                 background: rgba(#fff, 1);
             }
+            .ver-text {
+                display: none;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                transform: translateY(120%) scale(.9);
+                font-size: 12px;
+                color: #f40;
+            }
         }
         .submit-btn {
             display: block;
@@ -61,12 +86,12 @@
         color: #666;
         font-size: 12px;
         margin: 18px 0;
-        transition: all .3s ease;
         .kind-imgs {
             .kind-img {
                 cursor: pointer;
                 width: 23px;
                 margin-right: 5px;
+                transition: all .3s ease;
                 &:hover {
                     transform: scale(1.1);
                 }

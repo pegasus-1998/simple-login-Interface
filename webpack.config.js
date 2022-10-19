@@ -39,7 +39,7 @@ module.exports = {
                 use: ['style-loader', 'css-loader', 'sass-loader'],
             },
             { 
-                test: /\.jpg|png|gif$/,
+                test: /\.jpg|png|gif|ico$/,
                 type: "asset",
                 parser: {
                     dataUrlCondition: {

@@ -1,6 +1,3 @@
-import $ from 'jquery'
 import '@/styles/index.scss'
-
-$(function() {
-
-})
+import './js/formValidation'
+import './js/eventEl'
