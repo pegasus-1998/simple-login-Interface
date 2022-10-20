@@ -1,3 +1,20 @@
+.template2 {
+    display: none;
+    .two-code-container {
+        width: min-content;
+        margin: 25px auto;
+        margin-bottom: 10px;
+        padding: 6px;
+        background: #fff;
+        box-shadow: 2px 4px 4px rgba(#000, .5);
+    }
+    .content {
+        color: #666;
+        font-size: 12px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+}
 .login-module {
     position: absolute;
     top: 50%;
@@ -7,19 +24,16 @@
     min-height: 350px;
     padding: 25px;
     background: rgba(#fff, .7);
-    transition-property: 800;
-    .code-icon {
+    .code-icon,
+    .screen-icon {
         position: absolute;
         top: 10px;
         right: 10px;
         cursor: pointer;
-        width: 40px;
-        transition: all 2s ease;
-        transform-style: preserve-3d;
-        &:hover {
-            transform-origin: center;
-            transform: skew(15deg, 10deg) rotate(-45deg) ;
-        }
+        width: 32px;
+    }
+    .screen-icon {
+        display: none;
     }
     .login-mode {
         display: flex;
@@ -47,17 +61,35 @@
                 align-items: center;
                 width: 42px;
                 background-color: #ccc;
-                .icon-cen {
+                .icon-cen1,
+                .icon-cen2 {
                     width: 30px;
                     height: 30px;
                 }
             }
-            .pas-phone-input {
+            .right-con {
+                position: relative;
                 flex: 1;
-                border: none;
-                text-indent: 1em;
-                font-size: 14px;
-                background: rgba(#fff, 1);
+                .get-code {
+                    display: none;
+                    position: absolute;
+                    right: 8px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+                    user-select: none;
+                    font-size: 12px;
+                    color: #999;
+                }
+                .pas-input1,
+                .pas-input2 {
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    text-indent: 1em;
+                    font-size: 14px;
+                    background: rgba(#fff, 1);
+                }
             }
             .ver-text {
                 display: none;
@@ -78,6 +110,9 @@
             letter-spacing: 10px;
             background: #f40;
             border-radius: 4px;
+            &:hover {
+                background: #f52b00;
+            }
         }
     }
     .login-kind {
@@ -103,7 +138,8 @@
         justify-content: flex-end;
         color: #666;
         font-size: 12px;
-        .sp {
+        .sp1,
+        .sp2 {
             cursor: pointer;
             margin-left: 10px;
         }

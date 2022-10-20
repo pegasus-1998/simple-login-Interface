@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,43 +8,60 @@
     <title>simple-login-interface</title>
     <link rel=icon href=favicon.ico>
 </head>
+
 <body>
     <div class="login-module">
-        <img src="./imgs/code-icon.png" class="code-icon"/>
-        <div class="login-mode">
-            <a class="tab-item mode-active">密码登录</a>
-            <a class="tab-item">短信登录</a>
+        <img src="./imgs/code-icon.png" class="code-icon" />
+        <img src="./imgs/screen-icon.png" class="screen-icon" />
+        <div class="template1">
+            <div class="login-mode">
+                <a class="tab-item1 mode-active">密码登录</a>
+                <a class="tab-item2">短信登录</a>
+            </div>
+            <form class="login-form">
+                <div class="form-item">
+                    <div class="left-icon">
+                        <img src="./imgs/user-icon.png" class="icon-cen1" />
+                    </div>
+                    <div class="right-con">
+                        <input type="text" class="pas-input1" data-index='1' placeholder="请输入账号">
+                    </div>
+                    <span class="ver-text">请输入账号</span>
+                </div>
+                <div class="form-item">
+                    <div class="left-icon">
+                        <img src="./imgs/lock-icon.png" class="icon-cen2" />
+                    </div>
+                    <div class="right-con">
+                        <span class="get-code">获取验证码</span>
+                        <input type="text" class="pas-input2" data-index='2' placeholder="请输入密码">
+                    </div>
+                    <span class="ver-text">请输入密码</span>
+                </div>
+                <button type="submit" class="submit-btn">登录</button>
+            </form>
+            <div class="login-kind">
+                <span>其它登录：</span>
+                <div class="kind-imgs">
+                    <img src="./imgs/github-icon.png" class="kind-img" />
+                    <img src="./imgs/wx-icon.png" class="kind-img" />
+                    <img src="./imgs/wb-icon.png" class="kind-img" />
+                    <img src="./imgs/zfb-icon.png" class="kind-img" />
+                </div>
+            </div>
         </div>
-        <form class="login-form">
-            <div class="form-item">
-                <div class="left-icon">
-                    <img src="./imgs/user-icon.png" class="icon-cen"/>
-                </div>
-                <input type="text" class="pas-phone-input" data-index='1' placeholder="请输入账号">
-                <span class="ver-text">请输入账号</span>
+        <div class="template2">
+            <h3>手机扫码，安全登录</h3>
+            <div class="two-code-container">
+                <div id="two-code"></div>
             </div>
-            <div class="form-item">
-                <div class="left-icon">
-                    <img src="./imgs/lock-icon.png" class="icon-cen"/>
-                </div>
-                <input type="text" class="pas-phone-input" data-index='2' placeholder="请输入密码">
-                <span class="ver-text">请输入密码</span>
-            </div>
-            <button type="submit" class="submit-btn">登录</button>
-        </form>
-        <div class="login-kind">
-            <span>其它登录：</span>
-            <div class="kind-imgs">
-                <img src="./imgs/github-icon.png" class="kind-img"/>
-                <img src="./imgs/wx-icon.png" class="kind-img"/>
-                <img src="./imgs/wb-icon.png" class="kind-img"/>
-                <img src="./imgs/zfb-icon.png" class="kind-img"/>
-            </div>
+            <div class="content">打开APP扫一扫登录</div>
         </div>
         <div class="other-fun">
-            <span class="sp">忘记密码</span>
-            <span class="sp">免费注册</span>
+            <span class="sp1">忘记密码</span>
+            <span class="sp2">免费注册</span>
         </div>
     </div>
 </body>
+
 </html>
