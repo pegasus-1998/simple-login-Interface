@@ -9,10 +9,17 @@
         box-shadow: 2px 4px 4px rgba(#000, .5);
     }
     .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         color: #666;
         font-size: 12px;
-        text-align: center;
+        margin-top: 15px;
         margin-bottom: 25px;
+        .sys-icon {
+            width: 25px;
+            margin-right: 10px;
+        }
     }
 }
 .login-module {
@@ -91,7 +98,8 @@
                     background: rgba(#fff, 1);
                 }
             }
-            .ver-text {
+            .ver-text1,
+            .ver-text2 {
                 display: none;
                 position: absolute;
                 left: 0;
@@ -138,10 +146,14 @@
         justify-content: flex-end;
         color: #666;
         font-size: 12px;
+        .sp0,
         .sp1,
         .sp2 {
             cursor: pointer;
             margin-left: 10px;
+        }
+        .sp0 {
+            display: none;
         }
     }
 }
