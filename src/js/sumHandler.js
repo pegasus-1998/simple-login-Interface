@@ -1,6 +1,6 @@
 import $ from 'jquery'
 
-import { clearTipsVerContent } from './callHandler'
+import { clearTipsVerContent } from './formValidation'
 
 import userIcon from '@/imgs/user-icon.png'
 import lockIcon from '@/imgs/lock-icon.png'
@@ -10,12 +10,6 @@ import verIcon from '@/imgs/ver-icon.png'
 initEventHandlers()
 
 function initEventHandlers() {
-    $('.get-code').on('click', function() {
-        
-    })
-    $('.submit-btn').on('click', function(e) {
-        e.preventDefault()
-    })
     $('.sp0').on('click', () => {
         cancelTwocodeHandler()
         selectPasswordHandler()
@@ -35,10 +29,11 @@ function selectPasswordHandler() {  // 选择密码登录
     $('.icon-cen2').attr({src: lockIcon})
     $('.pas-input1').attr({placeholder: '请输入账号'})
     $('.pas-input2').attr({placeholder: '请输入密码'})
+    Object.prototype.myCustomProp.isPhoneLogin = false
     clearTipsVerContent()
 }
 
-function selectVercodeHandler() {  // 选择验证码登录
+function selectVercodeHandler() {  // 选择短信登录
     $('.sp1').hide()
     $('.get-code').show()
     $('.tab-item1').removeClass('mode-active')
@@ -47,6 +42,7 @@ function selectVercodeHandler() {  // 选择验证码登录
     $('.icon-cen2').attr({src: verIcon})
     $('.pas-input1').attr({placeholder: '请输入手机号'})
     $('.pas-input2').attr({placeholder: '请输入验证码'})
+    Object.prototype.myCustomProp.isPhoneLogin = true
     clearTipsVerContent()
 }
 
